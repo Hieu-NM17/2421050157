@@ -1,6 +1,17 @@
 body {
     color: white;
     background-color: #2F2C38;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 20px;
 }
 
 .danh-sach-muc {
@@ -48,6 +59,11 @@ header {
 
 /* Main */
 
+main {
+    width: 100%;
+    height: auto;
+}
+
 .banner {
     /* background-color: aliceblue; */
     width: 95%;
@@ -62,7 +78,6 @@ header {
 
 .danh-sach-the-loai {
     width: 95%;
-    height: 20vh;
     /* background-color: aliceblue; */
     margin-top: 20px;
 }
@@ -73,6 +88,7 @@ header {
 
 .ten-the-loai {
     font-weight: 550;
+    margin: 5px 0;
 }
 
 .phim {
@@ -82,14 +98,12 @@ header {
 
 .phim-poster {
     width: 19%;
-    height: 20vh;
     background-color: aliceblue;
     border-radius: 10px;
 }
 
 .danh-sach-nhan-vat {
     width: 95%;
-    height: 20vh;
     /* background-color: aliceblue; */
     margin-top: 20px;
 }
@@ -106,3 +120,24 @@ header {
     border-radius: 50%;
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0 20px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cot-footer {
+    display: flex;
+    margin: 0 20px;
+    flex-direction: column;
+}
+
+.cot-footer__thong-tin {
+    color: #777973;
+    margin: 10px 0;
+}
