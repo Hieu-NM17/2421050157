@@ -206,7 +206,7 @@ else {
 }
 document.writeln('<br>')
 var so = 9
-if (so %2 == 0) {
+if (so % 2 == 0) {
     document.write('Số chẵn')
 }
 else {
@@ -214,7 +214,70 @@ else {
 }
 
 document.writeln('<br>')
+var so = '2000000000000000000000000002'
+var doDai = so.length
+var soCuoiCung = so[doDai - 1]
+if (soCuoiCung % 2 == 0) {
+    document.write('Số chẵn')
+}
+else {
+    document.write('Số lẻ')
+}
+
+document.writeln('<br>')
+var d = new Date()
+var theDay = d.getDay()
+switch (theDay) {
+    case 5:
+        document.write('Finally Friday')
+        break
+    case 6:
+        document.write('Super Saturday')
+        break
+    case 0:
+        document.write('Sleepy Sunday')
+        break
+    default:
+        document.write('I am looking forward to this weekend')
+}
+
+document.writeln('<br>')
+for (var i = 0; i < mangTen.length; i++) {
+    if (!isNaN(mangTen[i]))
+        document.write(mangTen[i])
+    else {
+        continue
+    }
+}
+
+document.writeln('<br>')
+var j = 0
+do {
+    document.write('The number is ' + j)
+    document.write('<br>')
+    j = j+1
+} while (j <= 10)
+
+document.writeln('<br>')
+// popup box
+// alert('Hello')
+document.writeln('<br>')
+// var r = confirm('Press a button')
+// if (r == true) {
+//     document.write('You pressed OK')
+// }
+// else {
+//     document.write('You press Cancel')
+// }
+
+document.writeln('<br>')
+var r = prompt('Nhập họ tên', 'Nhập tên ở đây')
+document.write(r)
 document.writeln('<br>')
 document.writeln('<br>')
+document.writeln('<br>')
+document.writeln('<br>')
+document.writeln('<br>')
+
 
 
