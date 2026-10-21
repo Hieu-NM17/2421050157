@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Tiếp</title>
-    <script src="script.js"></script>
 </head>
+
 <body>
-    
+    <div>
+        Nhập điểm A: <input id="diemA" type="number">
+    </div>
+
+    <div>
+        Nhập điểm B: <input id="diemB" type="number">
+    </div>
+
+    <div>
+        Nhập điểm C: <input id="diemC" type="number">
+    </div>
+
+    <div>
+        <button onclick="tinhDiem()">Tính điểm</button>
+    </div>
+
+    <div>
+        Kết quả: <input id="ketQua" readonly>
+    </div>
+
+    <div>
+        Nhập năm sinh: <input id="namSinh">
+    </div>
+
+    <div>
+        <button onclick="layNS()">Tính tuổi</button>
+    </div>
+
+    <div>
+        Kết quả: <input id="tuoi" readonly>
+    </div>
+
+    <script>
+        function tinhDiem() {
+            var a = parseFloat(document.getElementById('diemA').value);
+            var b = parseFloat(document.getElementById('diemB').value);
+            var c = parseFloat(document.getElementById('diemC').value);
+            document.getElementById('ketQua').value = tinhDiemChu(a, b, c);
+        }
+
+        function tinhDiemChu(a, b, c) {
+            var tong = a * 0.6 + b * 0.3 + c * 0.1;
+            var kq = '';
+            if (tong >= 9.0) {
+                kq = 'A+';
+            }
+            else if (tong >= 8.5) {
+                kq = 'A';
+            }
+            else if (tong >= 8.0) {
+                kq = 'B+';
+            }
+            else if (tong >= 7.0) {
+                kq = 'B';
+            }
+            else if (tong >= 6.5) {
+                kq = 'C+';
+            }
+            else if (tong >= 5.5) {
+                kq = 'C';
+            }
+            else if (tong >= 5.0) {
+                kq = 'D+';
+            }
+            else if (tong >= 4.0) {
+                kq = 'D';
+            }
+            else {
+                kq = 'F';
+            }
+            return kq;
+        }
+
+        var year = new Date().getFullYear()
+
+        function layNS() {
+            var a = parseInt(document.getElementById('namSinh').value)
+            var b = document.getElementById('tuoi').value = year - a
+        }
+
+        
+
+
+    </script>
+
 </body>
+
 </html>
