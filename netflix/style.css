@@ -71,6 +71,13 @@ main {
     border-radius: 10px;
 }
 
+.banner iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 10px;
+}
+
 .banner-anh {
     width: 100%;
     border-radius: 10px;
