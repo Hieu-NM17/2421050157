@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="header__logo-link">
+            <img src="/img/netflix.svg" alt="Netflix" class="header__logo" />
+        </a>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item header__nav-item--active">
+                    <a href="#" class="header__nav-link">Trang chủ</a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Nhân vật</a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Series</a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Phim</a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Mới &amp; Phổ biến</a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Netflix của tôi</a>
+                </li>
+
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">Duyệt tìm theo ngôn ngữ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <img src="/img/pfp_netflix.png" alt="Avatar" class="header__avatar" />
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- labrador video -->
+        <div style="display: none;" class="labrador labrador__video">
+            <iframe class="labrador__iframe" width="560" height="315" src="https://www.youtube.com/embed/nm1hA18q_Ws?si=wM5G_rqxkvsBFoe-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- labrador image -->
+        <div class="labrador labrador__banner" onclick="showTrailer(0)">
+            <div>
+                <img src="/img/banner-anh.jpg" alt="Banner" class="labrador__image" />
+            </div>
+        </div>
+
+        <!-- Genre list -->
+        <div class="genre-list">
+
+            <!-- Có thể bạn chưa xem -->
+            <div class="genre">
+                <h2 class="genre__title">Có thể bạn chưa xem</h2>
+                <div class="genre__film-list">
+                    <img class="genre__film-poster"
+                        src="https://i.ytimg.com/vi/2le90FbiD4A/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAlezoLLADZzFGROCepHihFSk55Yg"
+                        alt="Phim" onclick="showTrailer(1)"/>
+                    <img class="genre__film-poster"
+                        src="https://i.ytimg.com/vi/po57ragkbZw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBhBXjFbBrxA8xGGh88qHi_ji4TYQ"
+                        alt="Phim" onclick="showTrailer(2)"/>
+                    <img class="genre__film-poster"
+                        src="https://i.ytimg.com/vi/xD3SLvHOUq4/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDtdkM2U9U25jO_drXGkHqaor_NzQ"
+                        alt="Phim" onclick="showTrailer(3)"/>
+                    <img class="genre__film-poster"
+                        src="https://i.ytimg.com/vi/dvxJVWevdiQ/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLB-nBrGKFcYximU1qQmSxngomi6cQ"
+                        alt="Phim" onclick="showTrailer(4)"/>
+                    <img class="genre__film-poster"
+                        src="https://i.ytimg.com/vi/TQfmdb2bDQM/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAjwJ0TfX57dVx9U08GQ1KAw5zSYQ"
+                        alt="Phim" onclick="showTrailer(5)"/>
+                </div>
+            </div>
+
+            <!-- Phim hài hước -->
+            <div class="genre">
+                <h2 class="genre__title">Phim hài hước</h2>
+                <div class="genre__film-list">
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYFYaTpHTEoPP66wjVy5YmA6wqrI7J7EdHhf1LeYb6w&s=10"
+                        alt="Phim hài hước" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYFYaTpHTEoPP66wjVy5YmA6wqrI7J7EdHhf1LeYb6w&s=10"
+                        alt="Phim hài hước" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYFYaTpHTEoPP66wjVy5YmA6wqrI7J7EdHhf1LeYb6w&s=10"
+                        alt="Phim hài hước" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYFYaTpHTEoPP66wjVy5YmA6wqrI7J7EdHhf1LeYb6w&s=10"
+                        alt="Phim hài hước" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLYFYaTpHTEoPP66wjVy5YmA6wqrI7J7EdHhf1LeYb6w&s=10"
+                        alt="Phim hài hước" />
+                </div>
+            </div>
+
+            <!-- Hoạt hình -->
+            <div class="genre">
+                <h2 class="genre__title">Hoạt hình</h2>
+                <div class="genre__film-list">
+                    <img class="genre__film-poster" src="/img/banner-anh.jpg" alt="Hoạt hình" />
+                    <img class="genre__film-poster" src="/img/banner-anh.jpg" alt="Hoạt hình" />
+                    <img class="genre__film-poster" src="/img/banner-anh.jpg" alt="Hoạt hình" />
+                    <img class="genre__film-poster" src="/img/banner-anh.jpg" alt="Hoạt hình" />
+                    <img class="genre__film-poster" src="/img/banner-anh.jpg" alt="Hoạt hình" />
+                </div>
+            </div>
+
+            <!-- Mọi người đang xem -->
+            <div class="genre">
+                <h2 class="genre__title">Mọi người đang xem</h2>
+                <div class="genre__film-list">
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjy71iINKIY2FNK3TqhqTDLBpE2hSnU7TjT75vNMEcPw&s=10"
+                        alt="Phim phổ biến" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjy71iINKIY2FNK3TqhqTDLBpE2hSnU7TjT75vNMEcPw&s=10"
+                        alt="Phim phổ biến" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjy71iINKIY2FNK3TqhqTDLBpE2hSnU7TjT75vNMEcPw&s=10"
+                        alt="Phim phổ biến" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjy71iINKIY2FNK3TqhqTDLBpE2hSnU7TjT75vNMEcPw&s=10"
+                        alt="Phim phổ biến" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjy71iINKIY2FNK3TqhqTDLBpE2hSnU7TjT75vNMEcPw&s=10"
+                        alt="Phim phổ biến" />
+                </div>
+            </div>
+
+            <!-- Top 10 phim Trẻ em tại Việt Nam hôm nay -->
+            <div class="genre">
+                <h2 class="genre__title">Top 10 phim Trẻ em tại Việt Nam hôm nay</h2>
+                <div class="genre__film-list">
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5vJCJeaevp2sfD1NWc_RuX1Y_5NqfhzXd7Qj3SRpmg&s=10"
+                        alt="Top phim trẻ em" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5vJCJeaevp2sfD1NWc_RuX1Y_5NqfhzXd7Qj3SRpmg&s=10"
+                        alt="Top phim trẻ em" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5vJCJeaevp2sfD1NWc_RuX1Y_5NqfhzXd7Qj3SRpmg&s=10"
+                        alt="Top phim trẻ em" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5vJCJeaevp2sfD1NWc_RuX1Y_5NqfhzXd7Qj3SRpmg&s=10"
+                        alt="Top phim trẻ em" />
+                    <img class="genre__film-poster"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5vJCJeaevp2sfD1NWc_RuX1Y_5NqfhzXd7Qj3SRpmg&s=10"
+                        alt="Top phim trẻ em" />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Character list -->
+        <div class="character-list">
+            <h2 class="character-list__title">Nhân vật</h2>
+
+            <div class="character-list__row">
+                <img class="character-list__avatar" src="/img/banner-anh.jpg" alt="Nhân vật" />
+                <img class="character-list__avatar" src="/img/banner-anh.jpg" alt="Nhân vật" />
+                <img class="character-list__avatar" src="/img/banner-anh.jpg" alt="Nhân vật" />
+                <img class="character-list__avatar" src="/img/banner-anh.jpg" alt="Nhân vật" />
+                <img class="character-list__avatar" src="/img/banner-anh.jpg" alt="Nhân vật" />
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__column">
+            <a href="#" class="footer__link">Mô tả âm thanh</a>
+            <a href="#" class="footer__link">Thẻ quà tặng</a>
+            <a href="#" class="footer__link">Quyền riêng tư</a>
+            <a href="#" class="footer__link">Liên hệ với chúng tôi</a>
+            <a href="#" class="footer__link">Quan hệ với nhà đầu tư</a>
+            <a href="#" class="footer__link">Thông báo pháp lý</a>
+        </div>
+
+        <div class="footer__column">
+            <a href="#" class="footer__link">Việc làm</a>
+            <a href="#" class="footer__link">Điều khoản sử dụng</a>
+            <a href="#" class="footer__link">Thông tin doanh nghiệp</a>
+            <a href="#" class="footer__link">Trung tâm đa phương tiện</a>
+        </div>
+
+        <div class="footer__column">
+            <a href="#" class="footer__link">Tuỳ chọn cookies</a>
+            <p class="footer__text">1997-2026 Netflix, Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

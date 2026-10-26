@@ -1,0 +1,178 @@
+body {
+    color: white;
+    background-color: #2F2C38;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 
+   Header
+ */
+
+.header {
+    width: 99%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-link {
+    display: inline-flex;
+}
+
+.header__logo {
+    width: 95px;
+}
+
+.header__avatar {
+    width: 50px;
+    border-radius: 15px;
+}
+
+.header__nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__nav-item {
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.header__nav-item:hover {
+    background-color: gray;
+}
+
+.header__nav-item--active {
+    background-color: #4E4B52;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #DBDBDD;
+    font-weight: 550;
+}
+
+/* 
+   Main
+ */
+
+.main {
+    width: 99%;
+    height: auto;
+}
+
+/* 
+   Hero / Banner
+ */
+
+.labrador {
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.labrador__iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.labrador__image {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* 
+   Genre list
+ */
+
+.genre-list {
+    width: 95%;
+    margin-top: 20px;
+}
+
+.genre {
+    margin: 50px;
+}
+
+.genre__title {
+    font-weight: 550;
+    margin: 5px 0;
+}
+
+.genre__film-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.genre__film-poster {
+    width: 19%;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.genre__film-poster:hover {
+    transform: scale(1.05);
+}
+
+/* 
+   Character list
+ */
+
+.character-list {
+    width: 95%;
+    margin-top: 20px;
+    padding-left: 50px;
+}
+
+.character-list__title {
+    font-weight: 550;
+    margin: 5px 0;
+}
+
+.character-list__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.character-list__avatar {
+    width: 150px;
+    height: 150px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 
+   Footer
+ */
+
+.footer {
+    width: 99%;
+    height: auto;
+    margin: 20px 20px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__column {
+    display: flex;
+    margin: 0 20px;
+    flex-direction: column;
+}
+
+.footer__link,
+.footer__text {
+    color: #777973;
+    margin: 10px 0;
+}

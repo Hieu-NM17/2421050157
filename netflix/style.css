@@ -73,8 +73,7 @@ main {
 
 .banner iframe {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
+    height: 600px;
     border-radius: 10px;
 }
 
