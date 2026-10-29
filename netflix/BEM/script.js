@@ -61,5 +61,10 @@ function showTrailer(filmId) {
     if (videoBanner) {
         videoBanner.style.display = 'block'
     }
+
+    document.querySelector('.labrador__title').innerHTML = selectedFilm.ten
+
+    
+
 }
 
