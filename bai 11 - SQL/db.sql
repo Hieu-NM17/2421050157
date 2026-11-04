@@ -80,6 +80,18 @@ CREATE TABLE if not EXISTS phim_dien_vien (
     dien_vien_id int not null
 );
 
+CREATE TABLE phim_the_loai (
+    id int AUTO_INCREMENT PRIMARY key,
+    phim_id int,
+    the_loai_id int
+);
+
+CREATE TABLE phim_dien_vien (
+    id int AUTO_INCREMENT PRIMARY KEY,
+    phim_id int,
+    dien_vien_id int
+);
+
 INSERT INTO `the_loai`(`id`, `ten_the_loai`) VALUES ('6','Viễn tưởng');
 INSERT INTO `the_loai`(`ten_the_loai`) VALUES ('Viễn tưởng');
 
@@ -116,14 +128,6 @@ VALUES
 -- Interstellar
 (5, 1);
 
-SELECT * from `phim` p
-join `dao_dien` dd
-ON p.dao_dien_id = dd.id
-JOIN `phim_the_loai` ptl
-on p.id = ptl.phim_id
-JOIN the_loai tl
-on tl.id = ptl.the_loai_id
-where p.id = 1
 
 INSERT INTO `phim_the_loai` (`phim_id`, `the_loai_id`)
 VALUES
@@ -147,14 +151,12 @@ VALUES
 -- Interstellar: Viễn tưởng, Tình cảm
 (5, 5),
 (5, 6);
-CREATE TABLE phim_the_loai (
-    id int AUTO_INCREMENT PRIMARY key,
-    phim_id int,
-    the_loai_id int
-);
 
-CREATE TABLE phim_dien_vien (
-    id int AUTO_INCREMENT PRIMARY KEY,
-    phim_id int,
-    dien_vien_id int
-);
+SELECT * from `phim` p
+join `dao_dien` dd
+ON p.dao_dien_id = dd.id
+JOIN `phim_the_loai` ptl
+on p.id = ptl.phim_id
+JOIN the_loai tl
+on tl.id = ptl.the_loai_id
+where p.id = 1
