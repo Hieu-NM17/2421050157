@@ -19,7 +19,6 @@ create table nguoi_dung (
 	gioi_tinh boolean NOT NULL
 )
 
-<<<<<<< HEAD
 create table if not EXISTS the_loai (
 	id int AUTO_INCREMENT PRIMARY KEY not null,
 	ten_the_loai varchar(255) not null
@@ -42,7 +41,6 @@ create table if not EXISTS phim(
     ten_phim varchar(255) not null,
     quoc_gia varchar(100),
     dao_dien_id int not null,
-=======
 create table the_loai (
 	id int AUTO_INCREMENT PRIMARY KEY,
 	ten_the_loai varchar(255)
@@ -65,13 +63,11 @@ create table phim(
     ten_phim varchar(255),
     quoc_gia varchar(100),
     dao_dien_id int,
->>>>>>> 37370f37d687f71035925fd5beff6506f67fba1a
     nam datetime,
 	do_tuoi int,
 	mo_ta varchar(255)
 );
 
-<<<<<<< HEAD
 CREATE TABLE if not EXISTS phim_the_loai (
     id int AUTO_INCREMENT PRIMARY key not null,
     phim_id int not null,
@@ -151,7 +147,6 @@ VALUES
 -- Interstellar: Viễn tưởng, Tình cảm
 (5, 5),
 (5, 6);
-=======
 CREATE TABLE phim_the_loai (
     id int AUTO_INCREMENT PRIMARY key,
     phim_id int,
@@ -163,4 +158,3 @@ CREATE TABLE phim_dien_vien (
     phim_id int,
     dien_vien_id int
 );
->>>>>>> 37370f37d687f71035925fd5beff6506f67fba1as
