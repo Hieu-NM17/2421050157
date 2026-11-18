@@ -1,11 +1,3 @@
-<?php
-        session_unset();
-        session_start();
-        if (!isset($_SESSION['login'])) {
-            header('Location: login.php');
-        }
-    ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    Trang chủ
+    <a style="color: black;">PHIM</a>
+    
 </body>
 </html>
