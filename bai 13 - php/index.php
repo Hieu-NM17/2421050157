@@ -63,11 +63,23 @@
             case 'phim':
                 include 'phim.php';
                 break;
+            case 'themphim':
+                include 'themphim.php';
+                break;
+            case 'capnhatphim':
+                include 'capnhatphim.php';
+                break;
             case 'themtaikhoan':
                 include 'themtaikhoan.php';
                 break;
             case 'capnhattaikhoan':
                 include 'capnhattaikhoan.php';
+                break;
+            case 'themdanhmuc':
+                include 'themdanhmuc.php';
+                break;
+            case 'capnhatdanhmuc':
+                include 'capnhatdanhmuc.php';
                 break;
         }
     }
