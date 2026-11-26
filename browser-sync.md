@@ -1,0 +1,1 @@
+npx browser-sync start --proxy "ptudweb.test" --files "bai13-php/**/*"
