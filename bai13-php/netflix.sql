@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 26, 2026 at 02:57 AM
+-- Generation Time: Nov 26, 2026 at 03:21 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.36
 
@@ -94,7 +94,7 @@ INSERT INTO `nguoi_dung` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, 
 (3, 'NhungNg', '12345', 'nhung@gmail.com', 'Nguyễn Thị Nhung', '2006-07-17', '036111111', 0),
 (4, 'Kou', '12345', 'kou@gmail.com', 'Nguyễn Minh Hiếu', '2006-04-17', '036111111', 1),
 (5, 'NhiNN', '12345', 'nhi@gmail.com', 'Trần Thị Yến Nhi', '2006-01-01', '0361111111', 0),
-(6, 'admin', 'gay', 'admin@gmail.com', 'Nguyễn Admin', '2026-02-02', '0981231234', 1);
+(9, 'admin', 'ad', 'ad@gmail.com', 'ad', '2000-01-01', '0987654321', 1);
 
 -- --------------------------------------------------------
 
@@ -109,19 +109,21 @@ CREATE TABLE `phim` (
   `dao_dien_id` int NOT NULL,
   `nam` datetime DEFAULT NULL,
   `do_tuoi` int DEFAULT NULL,
-  `mo_ta` varchar(255) DEFAULT NULL
+  `mo_ta` varchar(255) DEFAULT NULL,
+  `trailer` varchar(255) DEFAULT NULL,
+  `poster_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `phim`
 --
 
-INSERT INTO `phim` (`id`, `ten_phim`, `quoc_gia`, `dao_dien_id`, `nam`, `do_tuoi`, `mo_ta`) VALUES
-(1, 'Mai', 'Việt Nam', 1, '2024-01-01 00:00:00', 18, 'Câu chuyện tình cảm giữa Mai và Dương'),
-(2, 'Mắt Biếc', 'Việt Nam', 2, '2019-01-01 00:00:00', 16, 'Chuyện tình đơn phương của Ngạn dành cho Hà Lan'),
-(3, 'Bố Già', 'Việt Nam', 3, '2021-01-01 00:00:00', 16, 'Câu chuyện gia đình về tình cha con và những mâu thuẫn thế hệ'),
-(4, 'Inception', 'Mỹ', 4, '2010-01-01 00:00:00', 13, 'Một nhóm chuyên gia xâm nhập vào giấc mơ để đánh cắp ý tưởng'),
-(5, 'Interstellar', 'Mỹ', 5, '2014-01-01 00:00:00', 13, 'Hành trình tìm kiếm hành tinh mới để cứu nhân loại');
+INSERT INTO `phim` (`id`, `ten_phim`, `quoc_gia`, `dao_dien_id`, `nam`, `do_tuoi`, `mo_ta`, `trailer`, `poster_url`) VALUES
+(1, 'Mai', 'Việt Nam', 1, '2024-01-01 00:00:00', 18, 'Câu chuyện tình cảm giữa Mai và Dương', NULL, NULL),
+(2, 'Mắt Biếc', 'Việt Nam', 2, '2019-01-01 00:00:00', 16, 'Chuyện tình đơn phương của Ngạn dành cho Hà Lan', NULL, NULL),
+(3, 'Bố Già', 'Việt Nam', 3, '2021-01-01 00:00:00', 16, 'Câu chuyện gia đình về tình cha con và những mâu thuẫn thế hệ', NULL, NULL),
+(4, 'Inception', 'Mỹ', 4, '2010-01-01 00:00:00', 13, 'Một nhóm chuyên gia xâm nhập vào giấc mơ để đánh cắp ý tưởng', NULL, NULL),
+(5, 'Interstellar', 'Mỹ', 5, '2014-01-01 00:00:00', 13, 'Hành trình tìm kiếm hành tinh mới để cứu nhân loại', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -168,16 +170,10 @@ CREATE TABLE `phim_the_loai` (
 
 INSERT INTO `phim_the_loai` (`id`, `phim_id`, `the_loai_id`) VALUES
 (1, 1, 1),
-(2, 1, 5),
-(3, 2, 5),
-(4, 2, 8),
-(5, 3, 1),
-(6, 3, 5),
-(7, 4, 3),
-(8, 4, 6),
-(9, 4, 8),
-(10, 5, 5),
-(11, 5, 6);
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 4),
+(5, 5, 5);
 
 -- --------------------------------------------------------
 
@@ -270,13 +266,13 @@ ALTER TABLE `dien_vien`
 -- AUTO_INCREMENT for table `nguoi_dung`
 --
 ALTER TABLE `nguoi_dung`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `phim`
 --
 ALTER TABLE `phim`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `phim_dien_vien`
@@ -288,7 +284,7 @@ ALTER TABLE `phim_dien_vien`
 -- AUTO_INCREMENT for table `phim_the_loai`
 --
 ALTER TABLE `phim_the_loai`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `the_loai`
