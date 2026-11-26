@@ -42,8 +42,11 @@
     <?php
     include 'connect.php';
 
-    $sql = "SELECT * FROM phim 
-            JOIN dao_dien ON phim.dao_dien_id = dao_dien.id";
+    $sql = "SELECT phim.*, dao_dien.ho_ten AS ten_dao_dien, the_loai.ten_the_loai AS the_loai FROM phim
+            JOIN dao_dien ON phim.dao_dien_id = dao_dien.id
+            JOIN phim_the_loai ON phim.id = phim_the_loai.phim_id
+            JOIN the_loai ON the_loai.id = phim_the_loai.the_loai_id";
+            
     $result = mysqli_query($conn, $sql);
 
     
@@ -55,6 +58,7 @@
             <th>ID</th>
             <th>Tên phim</th>
             <th>Quốc gia</th>
+            <th>Thể loại</th>
             <th>Đạo diễn</th>
             <th>Năm</th>
             <th>Độ tuổi</th>
@@ -67,7 +71,8 @@
                 <td><?php echo $row['id'] ?></td>
                 <td><?php echo $row['ten_phim'] ?></td>
                 <td><?php echo $row['quoc_gia'] ?></td>
-                <td><?php echo $row['ho_ten'] ?></td>
+                <td><?php echo $row['the_loai'] ?></td>
+                <td><?php echo $row['ten_dao_dien'] ?></td>
                 <td><?php echo $row['nam'] ?></td>
                 <td><?php echo $row['do_tuoi'] ?></td>
                 <td><?php echo $row['mo_ta'] ?></td>
