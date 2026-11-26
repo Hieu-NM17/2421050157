@@ -44,6 +44,7 @@
                 <li><a href="index.php?page_layout=taikhoan">Tài khoản</a></li>
                 <li><a href="index.php?page_layout=danhmuc">Danh mục</a></li>
                 <li><a href="index.php?page_layout=phim">Phim</a></li>
+                <li><a href="index.php?page_layout=daodien">Đạo diễn</a></li>
             </ul>
         </nav>
     </header>
@@ -80,6 +81,15 @@
                 break;
             case 'capnhatdanhmuc':
                 include 'capnhatdanhmuc.php';
+                break;
+            case 'daodien':
+                include 'daodien.php';
+                break;
+            case 'themdaodien':
+                include 'themdaodien.php';
+                break;
+            case 'capnhatdaodien':
+                include 'capnhatdaodien.php';
                 break;
         }
     }
