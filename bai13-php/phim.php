@@ -34,6 +34,11 @@
         .xoa {
             background-color: gray;
         }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
     </style>
 </head>
 
@@ -63,6 +68,8 @@
             <th>Năm</th>
             <th>Độ tuổi</th>
             <th>Mô tả</th>
+            <th>Trailer</th>
+            <th>Poster</th>
         </tr>
         <?php
         while ($row = mysqli_fetch_array($result)) {
@@ -76,6 +83,10 @@
                 <td><?php echo $row['nam'] ?></td>
                 <td><?php echo $row['do_tuoi'] ?></td>
                 <td><?php echo $row['mo_ta'] ?></td>
+                <td><?php echo $row['trailer'] ?></td>
+                <td>
+                    <img src="<?php echo $row['poster_url'] ?>" alt="">
+                </td>
                 <td>
                     <a href="index.php?page_layout=capnhatphim&id=<?php echo $row['id']?>" class="capnhat" >Cập nhật</a>
                     <a href="xoaphim.php?id=<?php echo $row['id']?>" class="xoa">Xoá</a>
